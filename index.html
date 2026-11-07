@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>jue29. 荣格与密宗的29个觉</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon-180.png">
+<link rel="manifest" href="manifest.json">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{font-size:16px}
+body{font-family:Georgia,"Songti SC","STSong","SimSun",serif;
+ background:#F4EDDF;color:#2A2119;
+ padding:0 18px calc(46px + env(safe-area-inset-bottom));
+ background-image:radial-gradient(rgba(120,85,35,.06) 1px,transparent 1px);
+ background-size:20px 20px}
+header{padding:36px 2px 6px;text-align:center}
+.eyebrow{font-size:.64rem;letter-spacing:.42em;color:#8A6A2C;font-family:Courier,monospace}
+h1{font-size:2.9rem;font-weight:400;color:#3A2B1E;letter-spacing:.06em;margin:10px 0 2px;font-style:italic}
+h1 .n{color:#7B2A2A;font-size:3.3rem}
+.sub{font-size:.95rem;color:#5A4A33;letter-spacing:.14em;margin-top:2px}
+.orig{font-size:.68rem;color:#8A7A5C;letter-spacing:.28em;margin-top:14px;font-family:Courier,monospace}
+.meta{margin:18px auto 0;display:inline-block;text-align:left;font-size:.74rem;color:#6A5A43;
+ border-top:1px solid #C7B896;border-bottom:1px solid #C7B896;padding:10px 22px;line-height:1.9}
+.quote{margin:34px auto 0;max-width:600px;text-align:center;position:relative;padding:6px 10px}
+.quote::before{content:"✦";display:block;color:#B08D3E;font-size:.8rem;margin-bottom:10px;letter-spacing:.5em}
+.q1{font-size:1.06rem;line-height:2.05;color:#4A3828}
+.q1 b{color:#7B2A2A;font-weight:400}
+.qa{margin-top:16px;font-size:.8rem;color:#8A7A5C;font-style:italic}
+.qa::before{content:"—— "}
+.lead{max-width:620px;margin:30px auto 0;font-size:.86rem;line-height:2;color:#5A4B38;text-align:justify}
+.wallbox{max-width:640px;margin:40px auto 0}
+.sect{font-size:.66rem;letter-spacing:.3em;font-family:Courier,monospace;color:#8A6A2C;text-align:center;margin:34px 0 8px}
+.wall{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
+.w{width:34px;height:34px;border:1px solid #C9BC9C;background:#F8F2E4;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;font-size:.6rem;font-family:Courier,monospace;color:#9A8A68}
+.w.on{color:#fff;border-color:transparent;box-shadow:0 1px 3px rgba(60,40,20,.25)}
+.w.p0.on{background:#2E4A5C}.w.p1.on{background:#7B2A2A}.w.p2.on{background:#8A6A2C}
+.wprog{text-align:center;font-size:.74rem;color:#6A5A43;margin-top:10px;letter-spacing:.1em}
+.pcard{max-width:640px;margin:44px auto 0;border-left:3px solid;padding:4px 0 4px 14px;outline:1px solid rgba(178,141,62,.55);outline-offset:4px}
+.pcard .pn{font-size:.7rem;letter-spacing:.3em;font-family:Courier,monospace}
+.pcard h2{font-size:1.5rem;font-weight:400;margin:6px 0 4px;color:#3A2B1E}
+.pcard .pd{font-size:.8rem;color:#6A5A43;line-height:1.8}
+.pcard .pe{font-size:.62rem;letter-spacing:.26em;color:#8A7A5C;font-family:Courier,monospace;margin-top:6px}
+.card{max-width:640px;margin:12px auto;background:#F9F4E7;border:1px solid #C9AE6C;box-shadow:0 1px 0 rgba(178,141,62,.22);
+ border-radius:3px;padding:16px 16px 14px;position:relative;transform:rotate(-.25deg)}
+.card:nth-of-type(even){transform:rotate(.25deg)}
+.card.on{border-color:transparent;background:#FDF9EF;box-shadow:0 2px 8px rgba(80,55,25,.12)}
+.cn{font-family:Courier,monospace;font-size:.68rem;letter-spacing:.2em;color:#9A8A68}
+.cz{font-size:1.05rem;color:#3A2B1E;margin:5px 0 0;line-height:1.55}
+.cj{font-size:.8rem;color:#7B2A2A;margin-top:3px;font-style:italic}
+.cj::before{content:"觉 · "}
+.cmore{display:none;margin-top:12px;border-top:1px dashed #C9BC9C;padding-top:12px}
+.card.open .cmore{display:block}
+.cbody{font-size:.86rem;line-height:2.05;color:#4A3A28;text-align:justify}
+.cpair{margin-top:10px;font-size:.72rem;color:#5E6E78;line-height:1.7}
+.cpair::before{content:"◆ 对照 ";color:#8A6A2C;font-size:.64rem;letter-spacing:.2em}
+.cland{margin-top:12px;background:#F0E8D2;padding:9px 12px;font-size:.78rem;color:#5A4A33;line-height:1.8}
+.cland::before{content:"— 落地练习 —";display:block;font-size:.6rem;letter-spacing:.3em;color:#8A6A2C;margin-bottom:4px;font-family:Courier,monospace}
+.btn{margin-top:13px;display:inline-block;font-size:.78rem;letter-spacing:.22em;
+ padding:9px 26px;border:1px solid #7B2A2A;color:#7B2A2A;border-radius:2px;background:transparent;font-family:inherit}
+.btn:active{background:#7B2A2A;color:#F9F4E7}
+.card.on .btn{background:#7B2A2A;color:#F9F4E7}
+.card.on .jue{position:absolute;right:12px;top:12px;width:30px;height:30px;border-radius:50%;
+ background:radial-gradient(circle at 35% 35%,#C9432F,#7B2A2A);color:#F4E7CE;
+ display:flex;align-items:center;justify-content:center;font-size:.72rem;box-shadow:0 1px 3px rgba(80,30,20,.3)}
+.jue{display:none}
+.chead{display:flex;justify-content:space-between;align-items:baseline}
+.chead .cn{cursor:pointer}
+.final{max-width:640px;margin:56px auto 0;text-align:center;opacity:0;transition:opacity .8s;pointer-events:none}
+.final.show{opacity:1;pointer-events:auto}
+.fseal{width:120px;height:120px;border:3px double #B08D3E;border-radius:50%;margin:0 auto;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;color:#8A6A2C;
+ transform:rotate(-6deg);background:#F4EDDF}
+.fseal .fa{font-size:.72rem;letter-spacing:.3em;font-family:Courier,monospace}
+.fseal .fb{font-size:1.05rem;margin-top:5px;letter-spacing:.1em}
+.fseal .fc{font-size:.58rem;margin-top:6px;font-family:Courier,monospace;letter-spacing:.2em}
+.fq{margin-top:26px;font-size:.9rem;line-height:2;color:#5A4A33}
+.fq b{color:#7B2A2A;font-weight:400}
+.fsrc{margin-top:14px;font-size:.7rem;color:#8A7A5C;font-style:italic}
+.dict{max-width:640px;margin:50px auto 0}
+.dict h3{text-align:center;font-size:.78rem;letter-spacing:.34em;color:#8A6A2C;font-weight:400;font-family:Courier,monospace}
+.drow{display:flex;align-items:center;gap:10px;padding:11px 6px;border-bottom:1px solid #DCCCAA;font-size:.82rem}
+.drow .a{flex:1;text-align:right;color:#2E4A5C}
+.drow .x{color:#B08D3E;font-size:.7rem}
+.drow .b{flex:1;color:#7B2A2A}
+.drow .t{display:block;font-size:.64rem;color:#8A7A5C;margin-top:3px}
+.gq{max-width:640px;margin:50px auto 0}
+.gq h3{text-align:center;font-size:.78rem;letter-spacing:.34em;color:#8A6A2C;font-weight:400;font-family:Courier,monospace}
+.gcard{margin:14px 0;background:#F8F2E4;padding:14px 18px;border-left:2px solid #B08D3E;transform:rotate(-.3deg)}
+.gcard:nth-of-type(even){transform:rotate(.3deg)}
+.gq2{font-size:.86rem;line-height:1.95;color:#4A3828}
+.gq2 b{color:#7B2A2A;font-weight:400}
+.honest{max-width:640px;margin:50px auto 0;background:#F0E8D2;padding:16px 20px}
+.honest h4{font-size:.66rem;letter-spacing:.3em;color:#8A6A2C;font-family:Courier,monospace;font-weight:400}
+.honest p{font-size:.74rem;color:#6A5A43;line-height:1.9;margin-top:8px;text-align:justify}
+.honest .dis{margin-top:10px;font-size:.7rem;color:#8A6A2A}
+footer{margin-top:54px;text-align:center;padding:20px 0 10px;border-top:1px solid #D8CCAA}
+footer .f1{font-size:.66rem;letter-spacing:.3em;color:#8A7A5C;font-family:Courier,monospace}
+footer .f2{font-size:.7rem;color:#9A8A68;margin-top:8px}
+#toast{position:fixed;left:50%;bottom:12%;transform:translateX(-50%) translateY(8px);background:#3A2B1E;color:#F4EDDF;
+ padding:9px 18px;font-size:.76rem;border-radius:3px;opacity:0;transition:.3s;pointer-events:none;letter-spacing:.08em}
+#toast.show{opacity:1;transform:translateX(-50%)}
+</style>
+</head>
+<body>
+<header>
+ <div class="eyebrow">ROB PREECE · 2008</div>
+ <h1><span class="n">29</span> 个觉</h1>
+ <div class="sub">荣格与密宗</div>
+ <div class="orig">THE WISDOM OF IMPERFECTION</div>
+ <div class="meta">
+  作者 罗布·普瑞斯（Rob Preece）<br>
+  心理治疗师 · 禅修老师 · 唐卡画家<br>
+  译者 廖世德 ｜ 台湾人本自然文化 2008 ｜ 384 页
+ </div>
+</header>
+
+<div class="quote">
+ <div class="q1">悉达多的<b>流浪</b>，荣格的<b>炼金术</b>，都象征个体化的历程。<br>
+ 悉达多的<b>苦</b>，荣格的<b>阴影</b>，都是让意识觉醒的催化剂。</div>
+ <div class="q1" style="margin-top:14px">荣格说：<b>「我们的心理疾病里，都藏着神性。」</b></div>
+ <div class="qa">出版社官方内容简介</div>
+</div>
+
+<p class="lead">这本书站在两个传统之间：荣格的深度心理学，与藏传密宗的修行体系。作者普瑞斯修行密宗三十余年、执业心理治疗十八年，他发现两者在深处共享同一张地图——密宗的成佛向往，即荣格「个体化」的目标；佛性（空性），可视为佛教版的「本我」（Self）原型。全书 29 个「觉」，就是这张地图上 29 座路标：从苦的呼唤出发，穿过阴影的荒原，最终把觉带回到红尘里活出来。</p>
+
+<div class="wallbox">
+ <div class="sect">THE WALL · 29 LANTERNS</div>
+ <div id="wall"></div>
+ <div class="wprog" id="wprog">0 / 29 觉已点亮</div>
+</div>
+
+<div id="list"></div>
+
+<div class="final" id="final">
+ <div class="sect">ALL 29 LIT</div>
+ <div class="fseal">
+  <div class="fa">✦ IMPERFECTION ✦</div>
+  <div class="fb">不完美的智慧</div>
+  <div class="fc">EST. THE WISDOM OF IMPERFECTION</div>
+ </div>
+ <div class="fq">爱与慈悲心是因了解<b>自己的弱点</b>而生，<br>智慧不仰仗灵感而生，<br>而是由缓慢且往往<b>痛苦的经验</b>累积而成。</div>
+ <div class="fsrc">—— 本书内容简介 · 人本自然文化</div>
+</div>
+
+<div class="dict">
+ <h3>◆ TWO VOCABULARIES · 一张地图两套语汇</h3>
+ <div class="drow"><div class="a">个体化<span class="t">成为完整的自己</span></div><div class="x">✦</div><div class="b">成佛<span class="t">觉性圆满</span></div></div>
+ <div class="drow"><div class="a">本我 Self 原型<span class="t">心灵整体的北极星</span></div><div class="x">✦</div><div class="b">佛性 / 空性<span class="t">本自具足的觉</span></div></div>
+ <div class="drow"><div class="a">阴影 / 情结<span class="t">不被承认的自己</span></div><div class="x">✦</div><div class="b">苦 / 烦恼<span class="t">觉醒的催化剂</span></div></div>
+ <div class="drow"><div class="a">炼金术<span class="t">铅缓慢变金</span></div><div class="x">✦</div><div class="b">转化之道<span class="t">染污转为觉智</span></div></div>
+ <div class="drow"><div class="a">移情<span class="t">把内在投射给老师</span></div><div class="x">✦</div><div class="b">皈依与依止<span class="t">师生之路的功课</span></div></div>
+ <div class="drow"><div class="a">回归生活<span class="t">个体化的终点</span></div><div class="x">✦</div><div class="b">回返红尘<span class="t">体现佛性</span></div></div>
+ <p style="font-size:.7rem;color:#8A7A5C;text-align:center;margin-top:10px;font-style:italic">「密宗的成佛向往实即荣格『个体化』的目标，佛性（空性）也可视为佛教版的『本我』原型。」——杨儒宾 · 推荐序</p>
+</div>
+
+<div class="gq">
+ <h3>◆ GOLDEN LINES · 金句墙</h3>
+ <div class="gcard"><div class="gq2">我们的心理障碍和情结，也是我们<b>看见佛性的因缘</b>。</div></div>
+ <div class="gcard"><div class="gq2">荣格的精神分析和佛法的觉，原来有着<b>同样的根</b>，埋在我们的内心深处。</div></div>
+ <div class="gcard"><div class="gq2">不论追求的是心理或灵性的健康，<b>关键在于接受自己的缺点</b>。</div></div>
+ <div class="gcard"><div class="gq2">智慧并不仰仗灵感而生，而是由<b>缓慢且往往痛苦的经验</b>累积而成。</div></div>
+</div>
+
+<div class="honest">
+ <h4>◆ DATA &amp; HONESTY · 考古与诚实标注</h4>
+ <p>书与 29 个觉的目录：豆瓣/百科/书店页双源实锤（原作 The Wisdom of Imperfection，台湾人本自然文化 2008 年版，译者廖世德，杨儒宾、赵慈慧、Stephen Batchelor、Sharon Salzberg 联合推荐）。金句墙与开篇引文均出自出版社官方简介及推荐语原文。</p>
+ <p>每觉的细读正文为导读式阐释——基于目录题眼与全书「接纳不完美」的主旨扩写，帮助理解与落地，<b>不是原书逐字摘录</b>；页码无可靠来源，不标注。想读原文，请找这本书。</p>
+ <div class="dis">※ 涉及心理治疗与灵修议题，本站为读书笔记，不构成医疗或心理治疗建议；持续的情绪困扰请寻求专业帮助。</div>
+</div>
+
+<footer>
+ <div class="f1">JUE29 · 29 AWAKENINGS</div>
+ <div class="f2">悉达多的流浪 × 荣格的炼金术 · 个体化的同一张地图</div>
+</footer>
+<div id="toast"></div>
+<script>
+var D=[{"no": 1, "part": 0, "zh": "觉醒一直藉由「苦」在呼唤我们", "body": "苦不是惩罚，是闹钟。佛法第一谛就是苦谛：苦是修行开始的缘起；荣格则说，神经症状是心灵的信使——不愿去感受的，终会以更大的声音回来敲门。两者在这一点上罕见地一致：痛，是内在要求被看见的方式。", "pair": "悉达多睹老病死 ↔ 荣格：症状是心灵的信使", "land": "下一次低落袭来，先别急着消除它。停三秒，问一句：它想叫醒我什么？"}, {"no": 2, "part": 0, "zh": "依恋修行本身也是一种执著", "body": "把修行变成另一件「必须做好」的事，抓取只是换了形式。灵修可以成为最体面的逃避——躲在「我很精进」里，绕开真正要面对的议题。执著于放下，仍是执著。", "pair": "法执 ↔ 对灵性成就的成瘾", "land": "诚实地检查：你是在「修行」，还是在「用修行」？"}, {"no": 3, "part": 0, "zh": "无我不是没有自我，是没有我执", "body": "最常见的误读：修行＝消灭自己。其实要松开的，是那个凝固不变、「必须由我掌控一切」的自我感，而不是删掉功能性的自我。荣格的个体化恰恰是「成为自己」——真实的自己越大，紧攥的自我越小。", "pair": "无我 ↔ 个体化（成为自己，而非取消自己）", "land": "你可以既有观点，又不把观点当成性命。"}, {"no": 4, "part": 0, "zh": "追求圆满本身，就是一种分别心", "body": "「圆满」一设定，眼前的一切就都成了不够好。追求完美的冲动，恰恰是分裂的根源：它先造出一个「理想的我」，再让真实的我永远不合格。圆满的反面不是堕落，是接纳。", "pair": "分别心 ↔ 理想自我对真实自我的暴政", "land": "留意「等我……就好了」这个句式。它把生活永远抵押给明天。"}, {"no": 5, "part": 0, "zh": "圆满不是超越，是接纳", "body": "这是全书书名的题眼：The Wisdom of Imperfection——不完美的智慧。圆满不是爬到别的地方去，是就地认领这个有弱点的自己。爱与慈悲心是因了解自己的弱点而生，而非因「圆满」理想而生。", "pair": "佛性本自具足 ↔ 自性（Self）内在具足", "land": "对着自己最不体面的那一块，练习说一句：这也算数。"}, {"no": 6, "part": 0, "zh": "自性，是我们内在的引导", "body": "荣格的 Self（本我/自性）是比自我大得多的心灵整体，像内在的北极星——个体化的每一步，都是它的牵引。密宗的佛性论与之遥相呼应：觉性本自具足，不假外求。方向感不必外借。", "pair": "佛性 ↔ 本我（Self）原型", "land": "安静时听一听：在所有「应该」的声音下面，还有没有一个更安静的方向感？"}, {"no": 7, "part": 0, "zh": "自我，是自性加上无明", "body": "自我不必打倒：它本来是自性的一部分，只是蒙了尘。佛教说「无明」——不是没有光，是忘了有光；荣格说无意识——不是不存在，是没被照亮。两者的药方也一致：觉察，把灯打开。", "pair": "无明 ↔ 无意识（未被照亮的自我）", "land": "把「我就是这样」改成「我暂时是这样」——留一扇灯的窗。"}, {"no": 8, "part": 0, "zh": "断念，是当我们可以抚摸花朵时", "body": "放下不是用力撇清，是松到能够感受。断念不是与世界断交，而是执取的手松开后，指尖反而能摸到花瓣的绒。真正的出离，对世界更温柔，不是更冷。", "pair": "出离 ↔ 心理距离（不再被内境缠缚）", "land": "今天找一样小东西——一朵花、一杯茶——不带目的地碰碰它。"}, {"no": 9, "part": 0, "zh": "承担是对自性的奉献", "body": "觉醒不是收到礼物就结束。荣格强调，个体化要求人「承担自性」——把内在的召唤接过来，兑现成生活；菩萨道说发心——觉悟之后，回身入世。领受了，就要有回应。", "pair": "发心/菩萨誓愿 ↔ 承担自性（assume the Self）", "land": "把最近一次「心里知道该做」的事，排进这周的日程。"}, {"no": 10, "part": 0, "zh": "要修行的企图心本身，就是问题", "body": "「我要觉醒」的那个用力，本身就在制造紧张。目标越神圣，抓得越紧——修行成了新的绩效考核。这一觉是釜底抽薪式的审视：连「追求进步」这只手，也要先松开。", "pair": "无所求 ↔ 无为（先松开「做对」的紧）", "land": "练习一次无所求的静坐：十分钟，不为达成任何状态。"}, {"no": 11, "part": 1, "zh": "慈悲不是理想，而是接受有阴影的自己", "body": "对着光明的部分慈悲观，容易；难的是对阴影慈悲。慈悲始于承认：我也有贪婪、嫉妒、恐惧、愤怒。绕开阴影发射出去的光，是伪光——干净得不像人的慈悲，接不住真实的苦。", "pair": "悲心 ↔ 阴影工作（shadow work）", "land": "为自己最不想承认的一个念头，留一点余地——不认同它，但承认它在场。"}, {"no": 12, "part": 1, "zh": "灵修，有时候是个人病态的面具", "body": "这一觉直指当代灵修最大的坑：灵性逃避（spiritual bypassing）——用修行绕开该处理的心理议题。打坐多年，愤怒还在、关系还烂，可能一直在绕路。修行越久问题越多？书里给的答案冷静而慈悲：不是法错了，是路被用错了。", "pair": "病态灵修 ↔ 神经症的面具（两者都可能遮住伤口）", "land": "修行让你更有耐心了，还是只是更擅长「不回应」了？"}, {"no": 13, "part": 1, "zh": "觉察情绪的生起、通过，就是最好的观照", "body": "不压制，不纵容，看着它来、看着它走。密宗的觉照功夫与荣格的情结工作在此汇合：情绪不是敌人，是能量在体内过境。压住的会进阴影，放纵的会烧掉关系，只有被看见的会自己通过。", "pair": "观照 ↔ 情结的觉察与整合", "land": "给情绪让路，但别让它开车。风暴里练习只做一件事：观。"}, {"no": 14, "part": 1, "zh": "灵修不是为了超越肉身，而是体现肉身的价值", "body": "密宗从不贬低身体——金刚身即道器；荣格坚持心理的肉身性——心灵住在身体里。用修行糟蹋身体：熬夜精进、饮食自罚、忽视疲惫，都是走偏的信号。身体是这一生产生觉的器皿。", "pair": "金刚身 ↔ 心灵的具身性（embodiment）", "land": "检查你的修行有没有善待身体：好好吃饭，好好睡觉。"}, {"no": 15, "part": 1, "zh": "权力不是为了控制，而是奉献", "body": "上师的权力、老师的权力、你的权力。阴影里的权力欲，是灵修圈最深的坑之一——以「为你好」索取服从，以「传承」掩盖占有。权力真正的位置是奉献：托举他人走他们自己的路。", "pair": "上师现象的阴影面 ↔ 权力情结", "land": "凡以爱之名要求你交出判断的，警惕。真正的老师希望你长大。"}, {"no": 16, "part": 1, "zh": "师生关系的几个课题", "body": "把老师当完美上师，是把自己该走的路外包出去。荣格把移情视为治疗关系的核心材料——投射在老师身上的，终归要收回来自己消化。理想化、依赖、幻灭，是同一条路上的三个路站。", "pair": "皈依与传承 ↔ 移情（transference）", "land": "感恩老师，但别交出自己的判断。收回投射，才是真正毕业。"}, {"no": 17, "part": 1, "zh": "体制内或外，其实都是个人的历程", "body": "出家在家、圈内圈外、有师无师——形式不是重点。个体化没有标准路线，菩萨道也不颁发统一制服。别用「我是修行人」或「我不搞这些」的身份标签，代替每天的真实功课。", "pair": "法无定法 ↔ 个体化的独一无二", "land": "撕掉一个标签再说话：你此刻的需要，比你的身份更诚实。"}, {"no": 18, "part": 2, "zh": "只有人生任务才让我们觉得有意义", "body": "荣格发现，人过半生最深的空虚，不是缺钱缺爱，是缺「任务」——那个非你不可、值得倾注后半生的事。意义感从来不是想出来的，是被一件事召唤出来的。佛法的「本愿」说的也是这个：愿力定，心就有了住处。", "pair": "本愿 ↔ 个体化的后半生任务", "land": "找到那件「不做会一直惦记」的事。它就是你的人生任务。"}, {"no": 19, "part": 2, "zh": "我们的目的不是超越，是佛性", "body": "不是逃到更高的世界，是认出本有的觉性。「超越」的冲动值得警惕——它常常是阴影的变形：用垂直上扬的姿态，回避水平方向该面对的功课。成佛不是离开人间，是在人间醒。", "pair": "即身成佛 ↔ 自性的实现（在这里，不在别处）", "land": "检查你的成长目标：是「到达别处」，还是「照亮此处」？"}, {"no": 20, "part": 2, "zh": "菩萨道的四个化身", "body": "菩萨不是雕像，是四种流动的心：慈——愿人快乐；悲——拔人之苦；喜——见人好而真心欢喜；舍——不被偏袒拉扯。心理侧的翻译就是共情训练：能爱人、能接苦、能欣赏、能持平。四种能力，都是练出来的。", "pair": "慈悲喜舍四无量心 ↔ 共情的四个维度", "land": "今天选一练：真心祝贺一个你有一点点嫉妒的人。"}, {"no": 21, "part": 2, "zh": "越过「荒原」的五个阶段", "body": "成长必有荒原期：意义干涸、旧地图失效、做什么都不对劲——这是必经的中段，不是失败的信号。书里把穿越荒原的历程画成了可以辨认的阶段。知道自己在第几段，就熬得过这一段。", "pair": "中阴（-between） ↔ 过渡期（liminality）", "land": "卡住的时候提醒自己：这可能是中段，不是终点。荒原自有出口。"}, {"no": 22, "part": 2, "zh": "「觉」不是用力挤出来的，要准备", "body": "顿悟不能强求，但可以准备。像柱香慢慢烧着，温度到了，纸自然穿透。密宗的次第修行讲的就是这个：铺柴、点火、守着——剩下的交给时间。求快的手，往往按灭了将明的火。", "pair": "渐修渐熟 ↔ 心灵的酝酿期（incubation）", "land": "别急着求「破」，先守「烧」。每天铺一点点柴。"}, {"no": 23, "part": 2, "zh": "守卫问：你准备好了没？", "body": "密宗坛城有守门者，荣格的转化之路上也有阈限与考验。进入更深层之前，心理会先出现阻抗：莫名的烦躁、想放弃、旧瘾复发。这不是倒退，是守卫在验票——真正的改变，往往先感到不适。", "pair": "坛城守门者 ↔ 转化前的阻抗（resistance）", "land": "下次想逃跑的时刻停一下：也许那正是门口。"}, {"no": 24, "part": 2, "zh": "参透像柱香把纸穿透", "body": "功夫是慢慢烧的，穿透是刹那的——两者是一件事。西藏的比喻：香举着不动，纸穿不透是时间未到；到处戳，纸只会千疮百孔。深度重复一件事，胜过浅尝一百件。", "pair": "一门深入 ↔ 荣格：深度专注于一个象征", "land": "选一个法门/功课，给它至少一百天，别四处戳洞。"}, {"no": 25, "part": 2, "zh": "「当下」包含表象世界与空性", "body": "当下不是逃离表象之后的另一个地方。色空不二：现象与空性同在，洗碗与法界同在。密宗不弃现象，现象即道场。全然地在洗碗里，就是最好的修行——不需要先到达某个状态才配开始。", "pair": "当下即坛城 ↔ 活在此时此地（the here and now）", "land": "今晚洗碗时只洗碗。感受水温、碗沿、泡沫的破。"}, {"no": 26, "part": 2, "zh": "回返红尘，是要体现佛性", "body": "上山是为了下山。觉悟若只留在山巅的体验里，是半途；密宗的果位要回到生活里长出来。荣格同样坚持：个体化的终点不是隐居，是带着整全的自己回到人间烟火。", "pair": "倒驾慈航 ↔ 个体化后的回归生活", "land": "把你最近的一点领悟，带进一件最普通的家务或一次对话。"}, {"no": 27, "part": 2, "zh": "体现佛性，是我们活着唯一的方式", "body": "体现（embodiment）是全书末段的关键词：不是拥有智慧，而是活成智慧。检验修行的地方不在山顶、不在课堂，在你的日常——你怎么说话、怎么花钱、怎么对待最亲近的人。", "pair": "活出佛性 ↔ 自性的生活化（lived individuation）", "land": "本周选一天，让「觉」只出现在行为里，不出现在念头里。"}, {"no": 28, "part": 2, "zh": "幻象是我们觉醒的基础", "body": "荣格说：「我们的心理疾病里，都藏着神性。」幻妄不是要被打败的敌人，是尚未被认出的材料。你的迷障、你的执念、你绕不出去的那件事——换个角度看，都是量身定做的功课入口。坑，是最深的门。", "pair": "maya（幻）之转化 ↔ 情结即转化之门", "land": "写下你最大的坑。旁边写一句：它可能是这门课的入口。"}, {"no": 29, "part": 2, "zh": "转世的佛，也要历经转化", "body": "终章收束：连公认的再来人也要一步步走完转化之路——悉达多也要六年苦行、菩提树下那一夜。没有例外，没有电梯。个体化是终身的事，佛道是累劫的事，而两者都只能从此刻的下一步开始。", "pair": "累劫修行 ↔ 终身个体化（lifelong process）", "land": "别问还剩多远。走好今晚这一步。"}],P=[{"zh": "第一部 · 唤醒", "en": "AWAKENING", "desc": "苦的呼唤、执著与无明——修行的起点，是不再绕开自己", "color": "#2E4A5C"}, {"zh": "第二部 · 遇见阴影", "en": "MEETING THE SHADOW", "desc": "阴影、病态灵修、肉身与权力——绕不过去的中间地带", "color": "#7B2A2A"}, {"zh": "第三部 · 个体化历程", "en": "INDIVIDUATION", "desc": "意义、荒原、当下与红尘——把觉活成生活本身", "color": "#8A6A2C"}],lit=JSON.parse(localStorage.getItem('jue29_log')||'[]');
+function save(){localStorage.setItem('jue29_log',JSON.stringify(lit))}
+function isLit(i){return lit.indexOf(i)>=0}
+function renderWall(){
+ var w=document.getElementById('wall');w.innerHTML='';
+ for(var i=0;i<29;i++)(function(i){
+  var d=document.createElement('div');
+  d.className='w p'+D[i].part+(isLit(i)?' on':'');
+  d.textContent=i+1;
+  w.appendChild(d);
+ })(i);
+ document.getElementById('wprog').textContent=lit.length+' / 29 觉已点亮';
+}
+function renderList(){
+ var l=document.getElementById('list');l.innerHTML='';
+ for(var pi=0;pi<3;pi++){
+  var ph=document.createElement('div');
+  ph.className='pcard';ph.style.borderColor=P[pi].color;
+  ph.innerHTML='<div class="pn" style="color:'+P[pi].color+'">PART '+(pi+1)+'</div><h2>'+P[pi].zh+'</h2><div class="pd">'+P[pi].desc+'</div><div class="pe">'+P[pi].en+'</div>';
+  l.appendChild(ph);
+  for(var ii=0;ii<29;ii++){var i=ii;if(D[i].part!==pi)continue;(function(i){
+   var c=document.createElement('div');
+   c.className='card'+(isLit(i)?' on':'');c.id='c'+i;
+   c.innerHTML='<div class="chead"><div class="cn" id="h'+i+'">No.'+(i<9?'0':'')+(i+1)+' · 第 '+(i+1)+' 觉</div></div>'
+    +'<div class="jue">觉</div><h3 class="cz">'+D[i].zh+'</h3>'
+    +'<div class="cmore"><div class="cbody">'+D[i].body+'</div>'
+    +'<div class="cpair">'+D[i].pair+'</div>'
+    +'<div class="cland">'+D[i].land+'</div>'
+    +'<button class="btn" id="b'+i+'">'+(isLit(i)?'已觉 · 再点可熄灭':'细读了 · 觉 ✓')+'</button></div>';
+   c.onclick=function(ev){openCard(i,ev)};
+   l.appendChild(c);
+  })(i);}
+ }
+}
+function openCard(i,ev){
+ var c=document.getElementById('c'+i);
+ if(!c.classList.contains('open')){c.classList.add('open');return}
+ if(ev&&ev.target&&ev.target.tagName==='BUTTON'){mark(i);return}
+}
+function mark(i){
+ if(isLit(i)){
+  lit.splice(lit.indexOf(i),1);save();renderWall();renderList();
+  document.getElementById('c'+i).classList.add('open');
+  document.getElementById('final').classList.remove('show');
+  toast('第 '+(i+1)+' 觉已熄灭');return;
+ }
+ lit.push(i);save();renderWall();renderList();
+ document.getElementById('c'+i).classList.add('open');
+ toast('第 '+(i+1)+' 觉 · '+D[i].zh.slice(0,10));
+ if(lit.length===29){
+  setTimeout(function(){document.getElementById('final').classList.add('show')},400);
+  setTimeout(function(){window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})},800);
+ }
+}
+var tt;
+function toast(s){var t=document.getElementById('toast');t.textContent=s;t.classList.add('show');
+ clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('show')},2000)}
+renderWall();renderList();
+if(lit.length===29){document.getElementById('final').classList.add('show')}
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "jue29. 荣格与密宗的29个觉",
+  "short_name": "jue29.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#F2E7CF",
+  "theme_color": "#7B2A2A",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}
